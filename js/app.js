@@ -115,7 +115,7 @@ function rating() {
     if (moves < 17) {
         startsContainer.innerHTML = `<li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li>`;
     
-    }else if ( moves < 24) {
+    }else if ( moves < 25) {
         startsContainer.innerHTML = ` <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li>`;
     
     } else if (moves > 25) {

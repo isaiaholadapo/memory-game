@@ -3,18 +3,19 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Contributing](#contributing)
+* [Rating](#rating)
 
 ## Instructions
+You need to match pairs of cards. Playing is very simple - you turn over one tile and then try to find a matching tile. 
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Rating
 
-To get started, open `js/app.js` and start building out the app's functionality
+3 Stars
+In other to get 3 stars you need to have a maximum of 16 moves.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+2 Stars
+In other to get 2 stars you need to have a maximum of 24 moves.
 
-## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+1 Star
+If you have more than 24 moves you get 1 star.
