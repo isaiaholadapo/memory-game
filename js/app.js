@@ -131,6 +131,7 @@ restartBtn.addEventListener('click', function() {
     // restart
     matchedCards = [];
     moves = 0;
+    count = 0;
     movesContainer.innerHTML = moves;
     startsContainer.innerHTML = ` <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
     
