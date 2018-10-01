@@ -12,6 +12,7 @@ let matchedCards = [];
 let modalShow = document.getElementsByClassName('modal')[0];
 
 function init() {
+  //  clearInterval(intId);
     window.onload = function() {
         modalShow.style.display = 'none';
     }
@@ -22,8 +23,6 @@ function init() {
         card.classList.add("card");
         card.innerHTML = `<i class="${icons[i]}"></i>`;
         cardContainer.appendChild(card);
-
-
         //Add click event
         click(card);
 
@@ -35,7 +34,7 @@ function click(card) {
 
     //card click event
     card.addEventListener('click', function() {
-        counting();
+        
         const currentCard = this;
         const previousCard = openCards[0];
         // existing opencard
@@ -83,7 +82,6 @@ let count = 0;
 let intId = setInterval(counting, 1000);
 
 function counting() {
-
     duration.textContent = count++ + ' Seconds';
 }
 
@@ -111,7 +109,7 @@ function addMove() {
 
 //Rating
 
-const startsContainer = document.querySelector(".stars");
+var startsContainer = document.querySelector(".stars");
 
 function rating() {
     if (moves < 17) {
@@ -173,10 +171,11 @@ let modalText = document.querySelector('.modal-content');
 
 function modalContent() {
     modalShow.style.display = 'block';
-    modalText.innerHTML = ` congratulations you finish the game in ${count} seconds and ${moves} moves you have  ${rating}`;
-}
+    modalText.textContent = ` congratulations you finish the game in ${count} seconds and ${moves} moves you have ${startsContainer} `;
+    
+    }
 
-let play
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
