@@ -109,7 +109,7 @@ function addMove() {
 
 //Rating
 
-var startsContainer = document.querySelector(".stars");
+var startsContainer = document.getElementsByClassName(".stars");
 
 function rating() {
     if (moves < 17) {
