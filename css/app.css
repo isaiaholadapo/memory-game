@@ -133,6 +133,11 @@ h1 {
     animation-duration: 1s; */
 }
 
+.modal-footer {
+
+    margin-bottom: 30%;
+}
+
 .closeBtn {
     font-size: 30px;
     float: right;

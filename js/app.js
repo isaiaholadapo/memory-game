@@ -109,7 +109,7 @@ function addMove() {
 
 //Rating
 
-var startsContainer = document.getElementsByClassName(".stars");
+var startsContainer = document.getElementsByClassName("stars")[0];
 
 function rating() {
     if (moves < 17) {
@@ -135,7 +135,8 @@ restartBtn.addEventListener('click', function() {
     count = 0;
     movesContainer.innerHTML = moves;
     startsContainer.innerHTML = ` <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
-
+    modal.style.display = 'none';
+   
 });
 // initiaze the game
 init();
@@ -163,16 +164,24 @@ window.addEventListener('click', clickOutside);
 function clickOutside(e) {
     if (e.target == modal) {
         modal.style.display = 'none';
+        
     }
+    
 }
 
 //modal content
 let modalText = document.querySelector('.modal-content');
+let modalFooter = document.querySelector('.fbtn');
 
 function modalContent() {
-    modalShow.style.display = 'block';
-    modalText.textContent = ` congratulations you finish the game in ${count} seconds and ${moves} moves you have ${startsContainer} `;
     
+    modalShow.style.display = 'block';
+    modalText.textContent = ` congratulations you finish the game in ${count} seconds and ${moves} moves you have  `;
+    var startsContainer_clone =startsContainer.cloneNode(true);
+    modalText.appendChild(startsContainer_clone);
+    modalText.appendChild(restartBtn);
+    
+   
     }
 
 
