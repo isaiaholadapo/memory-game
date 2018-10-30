@@ -1,21 +1,17 @@
 # Memory Game Project
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Rating](#rating)
-
-## Instructions
-You need to match pairs of cards. Playing is very simple - you turn over one tile and then try to find a matching tile. 
-
-## Rating
-
-3 Stars
-In other to get 3 stars you need to have a maximum of 16 moves.
-
-2 Stars
-In other to get 2 stars you need to have a maximum of 24 moves.
+## How to play :-
+1. Download or clone the repositoryon your machine.
+2. Extract the .zip file
+3. Open index.html in your browser.
 
 
-1 Star
-If you have more than 24 moves you get 1 star.
+## Rules and Regulations :-
+1. You have to match cards with identical face.
+2. Your moves are counted out as you proceed the game.
+3. If your moves are equal to 16 then you will get 3 Stars.
+4. If your moves are greater than 16 and less than 25 then you will get 2 Stars.
+5. Else you will get 1 Star.
+6. You can also restart the game at any stage by clicking the restart button.
+
+#### Don't lose hope while playing.
