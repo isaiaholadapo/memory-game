@@ -109,7 +109,7 @@ function addMove() {
 
 //Rating
 
-var startsContainer = document.getElementsByClassName("stars")[0];
+let startsContainer = document.getElementsByClassName("stars")[0];
 
 function rating() {
     if (moves < 17) {
@@ -135,16 +135,16 @@ restartBtn.addEventListener('click', function() {
     count = 0;
     movesContainer.innerHTML = moves;
     startsContainer.innerHTML = ` <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
-    modal.style.display = 'none';
+    
    
 });
 // initiaze the game
 init();
 
 // modal
-var modal = document.getElementById('simpleModal');
-var modalBtn = document.getElementById('modalBtn');
-var closeBtn = document.getElementsByClassName('closeBtn')[0];
+let modal = document.getElementById('simpleModal');
+let modalBtn = document.getElementById('modalBtn');
+let closeBtn = document.getElementsByClassName('closeBtn')[0];
 
 //open modal event listener
 modalBtn.addEventListener('click', openModal);
@@ -177,18 +177,33 @@ function modalContent() {
     
     modalShow.style.display = 'block';
     modalText.textContent = ` congratulations you finish the game in ${count} seconds and ${moves} moves you have  `;
-    var startsContainer_clone =startsContainer.cloneNode(true);
+    let startsContainer_clone =startsContainer.cloneNode(true);
     modalText.appendChild(startsContainer_clone);
-    modalText.appendChild(restartBtn);
+ //  modalText.appendChild(restartBtn);
+    modalFooter;
+   
     
    
     }
 
+    modalFooter.addEventListener('click', function() {
+        cardContainer.innerHTML = "";
+        openCards = [];
+        matchedCards = [];
+        moves = 0;
+       duration.textContent = 0;
+       count = 0;
+       intId = setInterval(counting, 1000);
+        movesContainer.innerHTML = moves;
+        startsContainer.innerHTML = ` <li><i class="fa fa-star"></i></li> <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
+        modalShow.style.display = 'none';
+        init();
+    })
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length,
+    let currentIndex = array.length,
         temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
